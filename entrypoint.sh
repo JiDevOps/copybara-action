@@ -11,6 +11,12 @@ git config --global user.email $INPUT_GIT_EMAIL
 
 docker pull sharelatex/copybara:latest
 
+
+
+echo $GITHUB_WORKSPACE
+
+cd $GITHUB_WORKSPACE
+
 ls -laRh
 
-cd $INPUT_PATH && docker run -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/root/.gitconfig -v "$(pwd)":/usr/src/app -i sharelatex/copybara copybara
+docker run -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/root/.gitconfig -v "$(pwd)":/usr/src/app -i sharelatex/copybara copybara
