@@ -1,0 +1,29 @@
+name: "Copybara"
+description: "GitHub Action for running Copybara."
+author: "Will Molloy <willjoemolloy@gmail.com>"
+inputs:
+  git_name:  
+    description: 'Git name to use when authoring commits.'
+    required: true
+  git_email:  
+    description: 'Git e-mail address to use when authoring commits.'
+    required: true
+  ssh_key:  
+    description: 'GitHub SSH Public Key for authenticating with GitHub.'
+    required: true
+  known_hosts:  
+    description: 'Known hosts file content with GitHub fingerprint.'
+    required: true
+  path:  
+    description: 'Path to copy.bara.sky.'
+    required: false
+    default: '.'
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.include_path }}
+    - ${{ inputs.exclude_path }}
+branding:
+  icon: lock
+  color: red
