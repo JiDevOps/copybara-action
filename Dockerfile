@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk get --no-cache \ 
+RUN apk add --no-cache \ 
   docker-cli \
   git
 
