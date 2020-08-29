@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk get --no-cache \ 
-  docker-cli
+  docker-cli \
   git
 
 COPY "entrypoint.sh" "/entrypoint.sh"
