@@ -22,8 +22,11 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.include_path }}
-    - ${{ inputs.exclude_path }}
+    - ${{ inputs.git_name }}
+    - ${{ inputs.git_email }}
+    - ${{ inputs.ssh_key }}
+    - ${{ inputs.known_hosts }}
+    - ${{ inputs.path }}
 branding:
   icon: lock
   color: red
