@@ -4,7 +4,7 @@ RUN apk add --no-cache \
   docker-cli \
   git
 
-COPY "entrypoint.sh" "/entrypoint.sh"
+COPY . .
 
 RUN chmod +x entrypoint.sh
 
