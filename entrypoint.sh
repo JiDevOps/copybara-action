@@ -11,4 +11,5 @@ git config --global user.email $INPUT_GIT_EMAIL
 
 docker pull sharelatex/copybara:latest
 
+ls
 docker run -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/root/.gitconfig -v "$(pwd)":/usr/src/app -i sharelatex/copybara copybara copy.bara.sky
